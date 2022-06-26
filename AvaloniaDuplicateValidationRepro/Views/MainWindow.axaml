@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaDuplicateValidationRepro.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaDuplicateValidationRepro.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaDuplicateValidationRepro">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<StackPanel>
+		<StackPanel Orientation="Horizontal">
+			<TextBlock VerticalAlignment="Center" Width="150" Text="Notify" />
+			<TextBox Text="{Binding TestNotifyData}" />
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+			<TextBlock VerticalAlignment="Center" Width="150" Text="CustomShort" />
+			<TextBox Text="{Binding CustomShort}" />
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+			<TextBlock VerticalAlignment="Center" Width="150" Text="CustomSetProperty" />
+			<TextBox Text="{Binding CustomSetProperty}" />
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+			<TextBlock VerticalAlignment="Center" Width="150" Text="CustomFull" />
+			<TextBox Text="{Binding CustomFull}" />
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+			<TextBlock VerticalAlignment="Center" Width="150" Text="CustomValidateBefore" />
+			<TextBox Text="{Binding CustomValidateBefore}" />
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+			<TextBlock VerticalAlignment="Center" Width="150" Text="CustomValidateAfter" />
+			<TextBox Text="{Binding CustomValidateAfter}" />
+		</StackPanel>
+	</StackPanel>
+</Window>
