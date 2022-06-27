@@ -1,0 +1,61 @@
+﻿First Validation breakpoint hit
+>	AvaloniaDuplicateValidationRepro.dll!AvaloniaDuplicateValidationRepro.ViewModels.MainWindowViewModel.Validate(string input, System.ComponentModel.DataAnnotations.ValidationContext context) Line 69
+ 	[Native to Managed Transition]	
+ 	[Managed to Native Transition]	
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.CustomValidationAttribute.IsValid(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext)
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext)
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.Validator.TryValidate(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.ComponentModel.DataAnnotations.ValidationAttribute attribute, out System.ComponentModel.DataAnnotations.Validator.ValidationError validationError)
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.Validator.GetValidationErrors(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.Collections.Generic.IEnumerable<System.ComponentModel.DataAnnotations.ValidationAttribute> attributes, bool breakOnFirstError)
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.Validator.TryValidateProperty(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.Collections.Generic.ICollection<System.ComponentModel.DataAnnotations.ValidationResult> validationResults)
+ 	CommunityToolkit.Mvvm.dll!CommunityToolkit.Mvvm.ComponentModel.ObservableValidator.ValidateProperty(object value, string propertyName)
+ 	AvaloniaDuplicateValidationRepro.dll!AvaloniaDuplicateValidationRepro.ViewModels.MainWindowViewModel.CustomValidateBefore.set(string value) Line 50
+ 	[Native to Managed Transition]	
+ 	[Managed to Native Transition]	
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.InpcPropertyAccessorPlugin.Accessor.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.DataValidationBase.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.DataValidationBase.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.DataValidationBase.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.ExceptionValidationPlugin.Validator.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.PropertyAccessorNode.SetTargetValueCore(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.BindingExpression.OnNext(object value)
+ 	Avalonia.Base.dll!Avalonia.Reactive.LightweightObservableBase<object>.PublishNext(object value)
+ 	Avalonia.Base.dll!Avalonia.AvaloniaObject.RaisePropertyChanged<string>(Avalonia.AvaloniaPropertyChangedEventArgs<string> change)
+ 	Avalonia.Base.dll!Avalonia.AvaloniaObject.SetAndRaise<string>(Avalonia.AvaloniaProperty<string> property, ref string field, string value)
+ 	Avalonia.Controls.dll!Avalonia.Controls.TextBox.SetTextInternal(string value)
+ 	Avalonia.Controls.dll!Avalonia.Controls.TextBox.HandleTextInput(string input)
+ 	Avalonia.Controls.dll!Avalonia.Controls.TextBox.OnTextInput(Avalonia.Input.TextInputEventArgs e)
+
+Second Validation breakpoint hit
+>	AvaloniaDuplicateValidationRepro.dll!AvaloniaDuplicateValidationRepro.ViewModels.MainWindowViewModel.Validate(string input, System.ComponentModel.DataAnnotations.ValidationContext context) Line 69
+ 	[Native to Managed Transition]	
+ 	[Managed to Native Transition]	
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.CustomValidationAttribute.IsValid(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext)
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext)
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.Validator.TryValidate(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.ComponentModel.DataAnnotations.ValidationAttribute attribute, out System.ComponentModel.DataAnnotations.Validator.ValidationError validationError)
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.Validator.GetValidationErrors(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.Collections.Generic.IEnumerable<System.ComponentModel.DataAnnotations.ValidationAttribute> attributes, bool breakOnFirstError)
+ 	System.ComponentModel.Annotations.dll!System.ComponentModel.DataAnnotations.Validator.TryValidateProperty(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.Collections.Generic.ICollection<System.ComponentModel.DataAnnotations.ValidationResult> validationResults)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.DataAnnotationsValidationPlugin.Accessor.InnerValueChanged(object value)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.PropertyAccessorBase.PublishValue(object value)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.InpcPropertyAccessorPlugin.Accessor.SendCurrentValue()
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.InpcPropertyAccessorPlugin.Accessor.Avalonia.Utilities.IWeakEventSubscriber<System.ComponentModel.PropertyChangedEventArgs>.OnEvent(object notifyPropertyChanged, Avalonia.Utilities.WeakEvent ev, System.ComponentModel.PropertyChangedEventArgs e)
+ 	Avalonia.Base.dll!Avalonia.Utilities.WeakEvent<System.ComponentModel.INotifyPropertyChanged, System.ComponentModel.PropertyChangedEventArgs>.Subscription.OnEvent(object sender, System.ComponentModel.PropertyChangedEventArgs eventArgs)
+ 	Avalonia.Base.dll!Avalonia.Utilities.WeakEvents..cctor.AnonymousMethod__6(object _, System.ComponentModel.PropertyChangedEventArgs e)
+ 	CommunityToolkit.Mvvm.dll!CommunityToolkit.Mvvm.ComponentModel.ObservableObject.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs e)
+ 	CommunityToolkit.Mvvm.dll!CommunityToolkit.Mvvm.ComponentModel.ObservableObject.OnPropertyChanged(string propertyName)
+ 	CommunityToolkit.Mvvm.dll!CommunityToolkit.Mvvm.ComponentModel.ObservableObject.SetProperty<string>(ref string field, string newValue, string propertyName)
+ 	AvaloniaDuplicateValidationRepro.dll!AvaloniaDuplicateValidationRepro.ViewModels.MainWindowViewModel.CustomValidateBefore.set(string value) Line 51
+ 	[Native to Managed Transition]	
+ 	[Managed to Native Transition]	
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.InpcPropertyAccessorPlugin.Accessor.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.DataValidationBase.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.DataValidationBase.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.DataValidationBase.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.Plugins.ExceptionValidationPlugin.Validator.SetValue(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.PropertyAccessorNode.SetTargetValueCore(object value, Avalonia.Data.BindingPriority priority)
+ 	Avalonia.Base.dll!Avalonia.Data.Core.BindingExpression.OnNext(object value)
+ 	Avalonia.Base.dll!Avalonia.Reactive.LightweightObservableBase<object>.PublishNext(object value)
+ 	Avalonia.Base.dll!Avalonia.AvaloniaObject.RaisePropertyChanged<string>(Avalonia.AvaloniaPropertyChangedEventArgs<string> change)
+ 	Avalonia.Base.dll!Avalonia.AvaloniaObject.SetAndRaise<string>(Avalonia.AvaloniaProperty<string> property, ref string field, string value)
+ 	Avalonia.Controls.dll!Avalonia.Controls.TextBox.SetTextInternal(string value)
+ 	Avalonia.Controls.dll!Avalonia.Controls.TextBox.HandleTextInput(string input)
+ 	Avalonia.Controls.dll!Avalonia.Controls.TextBox.OnTextInput(Avalonia.Input.TextInputEventArgs e)
